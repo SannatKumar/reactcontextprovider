@@ -2,8 +2,9 @@ import { createContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import './App.css';
+//Dont pass the object as actions not recommended
 //import Header from './components/Header' <Header />
-import { increment, decrement } from './redux/actions';
+import { increment, decrement, incrementWithPayload, decrementWithPayload } from './redux/actions';
 
 const themes = {
   light: 'white',
@@ -32,8 +33,9 @@ function App() {
       <button onClick = {() => dispatch(increment())}>Increment</button>
       <button onClick = {() => dispatch(decrement())}>Decrement</button>
 
-      <button onClick = {() => dispatch({type: 'INCREMENT'})}>Increment</button>
-      <button onClick = {() => dispatch({type: 'DECREMENT'})}>Decrement</button>
+
+      <button onClick = {() => dispatch(incrementWithPayload(5))}>Increment with 5</button>
+      <button onClick = {() => dispatch(decrementWithPayload(5))}>Decrement with 5</button>
     </ThemeContext.Provider>
   );
 }
