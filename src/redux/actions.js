@@ -13,13 +13,13 @@ export const decrement = () => {
 export const incrementWithPayload = value => {
     return{
         type: 'INCREMENT_WITH_PAYLOAD',
-        payload: value,
+        payload: {value},
     }
 }
 
 export const decrementWithPayload = value => {
     return{
         type: 'DECREMENT_WITH_PAYLOAD',
-        payload: value,
+        payload: {value},
     }
 }
