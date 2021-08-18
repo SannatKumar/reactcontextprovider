@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import './App.css';
 //import Header from './components/Header' <Header />
+import { increment, decrement } from './redux/actions';
 
 const themes = {
   light: 'white',
@@ -28,6 +29,8 @@ function App() {
     value = {context}>
       
       <h1>{counter}</h1>
+      <button onClick = {() => dispatch(increment())}>Increment</button>
+      <button onClick = {() => dispatch(decrement())}>Decrement</button>
     </ThemeContext.Provider>
   );
 }
