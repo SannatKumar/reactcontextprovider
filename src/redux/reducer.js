@@ -19,13 +19,13 @@ const reducer = (state = initialState, action) => {
         case 'INCREMENT_WITH_PAYLOAD':
             return{
                 ...state,
-                counter: state.counter + action.payload
+                counter: state.counter + action.payload.value
             }
         
         case 'DECREMENT_WITH_PAYLOAD':
             return{
                 ...state,
-                counter: state.counter - action.payload
+                counter: state.counter - action.payload.value
             }
         default: 
         return state
