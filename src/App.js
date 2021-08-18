@@ -31,6 +31,9 @@ function App() {
       <h1>{counter}</h1>
       <button onClick = {() => dispatch(increment())}>Increment</button>
       <button onClick = {() => dispatch(decrement())}>Decrement</button>
+
+      <button onClick = {() => dispatch({type: 'INCREMENT'})}>Increment</button>
+      <button onClick = {() => dispatch({type: 'DECREMENT'})}>Decrement</button>
     </ThemeContext.Provider>
   );
 }
