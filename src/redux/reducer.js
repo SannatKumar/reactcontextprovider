@@ -7,12 +7,12 @@ const reducer = (state = initialState, action) => {
         case 'INCREMENT':
             return{
                 ...state,
-                counter: initialState.counter + 1,
+                counter: state.counter + 1,
             }
         case 'DECREMENT':
             return{
                 ...state,
-                counter: initialState.counter - 1,
+                counter: state.counter - 1,
             }
         default: 
         return state
